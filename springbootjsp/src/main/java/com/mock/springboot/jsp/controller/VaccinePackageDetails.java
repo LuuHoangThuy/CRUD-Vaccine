@@ -1,0 +1,10 @@
+package com.mock.springboot.jsp.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping(value = "/packagedetails")
+public class VaccinePackageDetails {
+
+}
