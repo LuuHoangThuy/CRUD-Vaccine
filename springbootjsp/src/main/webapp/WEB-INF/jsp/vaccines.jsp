@@ -52,6 +52,8 @@
 				<td>Quốc gia</td>
 				<td>Đơn giá (VND)</td>
 				<td>Bệnh</td>
+				<td>Url ảnh</td>
+				<td>Tên ảnh</td>
 				<td>Ghi chú</td>
 				<td>Chỉnh sửa</td>
 				<td>Xóa</td>
@@ -63,6 +65,10 @@
 					<td>${vaccine.nation}</td>
 					<td>${vaccine.price}</td>
 					<td>${vaccine.sick}</td>
+					<td>
+						<img alt="" src="${vaccine.imgurl}">
+					</td>
+					<td>${vaccine.imgtitle}</td>
 					<td>${vaccine.note}</td>
 					<td><a href="/vaccine/edit/${vaccine.id}">Chỉnh sửa</a></td>
 					<td><a href="/vaccine/delete/${vaccine.id}">Xóa</a></td>

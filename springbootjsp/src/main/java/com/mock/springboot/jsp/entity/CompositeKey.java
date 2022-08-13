@@ -2,15 +2,20 @@ package com.mock.springboot.jsp.entity;
 
 import java.io.Serializable;
 
-public class CompositeKey implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
+@Embeddable
+public class CompositeKey implements Serializable {
+	@Column(name = "PackgeID")
 	private Long PackageID;
 	
+	@Column(name = "VaccineID")
 	private Long VaccineID;
+
+	public CompositeKey() {
+		super();
+	}
 
 	public CompositeKey(Long packageID, Long vaccineID) {
 		super();
@@ -33,6 +38,4 @@ public class CompositeKey implements Serializable {
 	public void setVaccineID(Long vaccineID) {
 		VaccineID = vaccineID;
 	}
-	
-	
 }

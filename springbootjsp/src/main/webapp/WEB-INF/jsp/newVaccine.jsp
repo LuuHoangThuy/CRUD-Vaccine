@@ -62,7 +62,19 @@ form:input {
 					</td>
 					<td><form:errors cssClass="errors" path="sick" /></td>			
 				</tr>
-
+				
+				<tr>
+					<td>Url ảnh:</td>
+					<td><form:input path="imgurl" /></td>
+					<td><form:errors cssClass="errors" path="imgurl" /></td>
+				</tr>
+				
+				<tr>
+					<td>Tên ảnh:</td>
+					<td><form:input path="imgtitle" /></td>
+					<td><form:errors cssClass="errors" path="imgtitle" /></td>
+				</tr>
+				
 				<tr>
 					<td>Ghi chú:</td>
 					<td><form:input path="note" /></td>

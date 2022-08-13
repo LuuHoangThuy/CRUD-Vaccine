@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.mock.springboot.jsp.entity.PackageDetails;
 
 public interface PackageDetailsRepository extends JpaRepository<PackageDetails, Long> {
-	List<PackageDetails> findByNameContaining(String name);
+	List<PackageDetails> findByIdContaining(Long Id);
 }

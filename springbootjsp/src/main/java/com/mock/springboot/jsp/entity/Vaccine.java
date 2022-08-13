@@ -28,7 +28,29 @@ public class Vaccine {
 
 	@Range(min = 0, max = 100000)
 	private Long price;
+	
+	@Column(name = "imgurl", columnDefinition = "nvarchar(250)")
+	private String imgurl;
+	
+	public String getImgurl() {
+		return imgurl;
+	}
 
+	public void setImgurl(String imgurl) {
+		this.imgurl = imgurl;
+	}
+
+	public String getImgtitle() {
+		return imgtitle;
+	}
+
+	public void setImgtitle(String imgtitle) {
+		this.imgtitle = imgtitle;
+	}
+
+	@Column(name = "imgtitle", columnDefinition = "nvarchar(250)")
+	private String imgtitle;
+	
 	@Column(name = "note", columnDefinition = "nvarchar(250)")
 	private String note;
 

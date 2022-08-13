@@ -1,15 +1,30 @@
 package com.mock.springboot.jsp.entity;
 
+import java.io.Serializable;
+
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
 
 @Entity
-@IdClass(CompositeKey.class)
-public class PackageDetails {
-	@Id
-	private Long PackageID;
+public class PackageDetails implements Serializable {
+	@EmbeddedId
+	private CompositeKey id;
+
+	public PackageDetails() {
+		super();
+	}
+
+	public PackageDetails(CompositeKey id) {
+		super();
+		this.id = id;
+	}
+
+	public CompositeKey getId() {
+		return id;
+	}
+
+	public void setId(CompositeKey id) {
+		this.id = id;
+	}
 	
-	@Id
-	private Long VaccineID;
 }
